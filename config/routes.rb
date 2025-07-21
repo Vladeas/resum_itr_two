@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   root "users#index"
 
   get "user_projects", to: "user_projects#index", as: "user_projects"
+  get "user_notes", to: "user_notes#index", as: "user_notes"
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
