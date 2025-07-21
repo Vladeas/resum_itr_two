@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :user_projects, foreign_key: "user_id", dependant: :destroy
+  has_many :user_projects, foreign_key: "user_id"
 
   def self.ransackable_attributes(auth_object = nil)
     [ "created_at", "date_of_birth", "description", "driving_license", "email", "encrypted_password", "forename", "github",
