@@ -6,6 +6,10 @@ class User < ApplicationRecord
 
   has_many :user_projects, foreign_key: "user_id"
 
+  def full_name
+    forename.to_s + " " + surname.to_s
+  end
+
   def self.ransackable_attributes(auth_object = nil)
     [ "created_at", "date_of_birth", "description", "driving_license", "email", "encrypted_password", "forename", "github",
      "id", "id_value", "linkedin", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token",
