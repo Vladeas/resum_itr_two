@@ -8,6 +8,7 @@ class User < ApplicationRecord
   has_many :user_notes, foreign_key: "user_id"
   has_many :user_languages, foreign_key: "user_id"
   has_many :user_skills, foreign_key: "user_id"
+  has_many :user_academics, foreign_key: "user_id"
 
   def self.ransackable_attributes(auth_object = nil)
     [ "created_at", "date_of_birth", "description", "driving_license", "email", "encrypted_password", "forename", "github",
