@@ -1,0 +1,2 @@
+class UserAcademicsController < ApplicationController
+end
