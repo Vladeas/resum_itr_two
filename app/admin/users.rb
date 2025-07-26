@@ -39,8 +39,8 @@ ActiveAdmin.register User do
       f.input :phone_number
       f.input :github
       f.input :linkedin
-      f.input :driving_license, as: :select, collection: [ :No, :Yes ]
-      f.input :description
+      f.input :content
+      f.input :driving_license # , as: :select, collection: [ :No, :Yes ]
     end
     f.actions
   end

@@ -12,7 +12,25 @@ case Rails.env
 when "development"
     User.create!(email: "user@example.com",
             password: ENV["SEED_PASSWORD"],
-            password_confirmation: ENV["SEED_PASSWORD"]) if !User.find_by_email("user@example.com")
+            password_confirmation: ENV["SEED_PASSWORD"],
+            id: 1,
+            forename: "Vlad",
+            surname: "Danciu",
+            date_of_birth: "1997-09-17",
+            phone_number: "0766737200",
+            github: "https://github.com/Vladeas",
+            linkedin: "https://www.google.com/search?num=10&newwindow=1&client=firefox-b-lm&sca_esv=4f09092a201a8ac4&channel=entpr&sxsrf=AE3TifPvqdsQwJokTFocSPxoFDX9POC_Qg:1753512248292&q=cats&udm=2&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIeoJTKjrFjVxydQWqI2NcOhYPURIv2wPgv_w_sE_0Sc6QqqU7k8cSQndc5mTXCIWHa5yWh8UZLeaMB2TzsL707pc1UdUOyvWrdH9KzB0rwa56e4sZMK6yB9HCSc5sZ95qH7WhtZ4UgYYwhFKAtUJ9yDKl7bQ8&sa=X&ved=2ahUKEwjPzKyV9tmOAxWjW0EAHfaBM28QtKgLKAF6BAgqEAE&biw=1920&bih=923&dpr=1#vhid=12ydIzin8CyDxM&vssid=mosaic",
+            driving_license: "B",
+            content: "
+            Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.
+            In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus
+            nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.
+            Ad litora torquent per conubia nostra inceptos himenaeos.
+
+            Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.
+            In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus
+            nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.
+            Ad litora torquent per conubia nostra inceptos himenaeos.") if !User.find_by_email("user@example.com")
 
     User.create!(email: "user2@example.com",
             password: ENV["SEED_PASSWORD"],
