@@ -1,3 +1,4 @@
+<!--
 <div class="bg-gray-100 font-sans flex justify-center items-center max-w-8xl mx-auto p-5 my-8">
 
     <div class="flex flex-col items-center justify-between shadow-md w-full md:w-8/12 mx-auto h-auto rounded-xl transition-all ease-in-out duration-500 mb-4 py-2 px-2 md:px-4">
@@ -133,29 +134,28 @@
     </div>
 
 </div>
+-->
 
+<!-- This one, simple enough -->
 <div class="bg-gray-100 text-gray-800">
     <div class="container mx-auto py-10 px-5">
         <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
             <div class="p-4 sm:p-6">
                 <div class="flex items-center justify-between">
                     <div>
-                        <h2 class="text-2xl font-semibold">Jane Doeball</h2>
+                        <h2 class="text-2xl font-semibold"><%= User.first.full_name %></h2>
                         <p class="text-sm text-gray-600">Senior Software Engineer</p>
                     </div>
                     <div>
-                        <p class="text-sm text-gray-600">Phone: (123) 456-7890</p>
-                        <p class="text-sm text-gray-600">Email:<a href="https://veilmail.io/irish-geoff"> https://veilmail.io/irish-geoff</a></p>
+                        <p class="text-sm text-gray-600">Phone: <%= User.first.phone_number %></p>
+                        <p class="text-sm text-gray-600">Email: <%= User.first.email %></a></p>
                         <p class="text-sm text-gray-600">Location: San Francisco, CA</p>
                     </div>
                 </div>
                 <hr class="my-4">
                 <div>
                     <h3 class="text-lg font-semibold mb-2">Summary</h3>
-                    <p class="text-sm leading-relaxed">Results-oriented Senior Software Engineer with 20 years of experience
-                        designing, developing, and deploying complex software solutions. Proficient in a variety of
-                        programming languages and technologies. Proven track record of leading teams and delivering
-                        high-quality products.</p>
+                    <p class="text-sm leading-relaxed"><%= User.first.content %></p>
                 </div>
                 <div class="mt-4">
                     <h3 class="text-lg font-semibold mb-2">Experience</h3>
