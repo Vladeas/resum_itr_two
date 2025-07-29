@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2025_07_21_143008) do
+ActiveRecord::Schema[7.2].define(version: 2025_07_26_073052) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -40,6 +40,25 @@ ActiveRecord::Schema[7.2].define(version: 2025_07_21_143008) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
+  create_table "user_academics", force: :cascade do |t|
+    t.string "name"
+    t.string "status"
+    t.text "content"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_user_academics_on_user_id"
+  end
+
+  create_table "user_languages", force: :cascade do |t|
+    t.string "language"
+    t.string "proficiency"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_user_languages_on_user_id"
+  end
+
   create_table "user_notes", force: :cascade do |t|
     t.string "title"
     t.boolean "private"
@@ -60,6 +79,26 @@ ActiveRecord::Schema[7.2].define(version: 2025_07_21_143008) do
     t.index ["user_id"], name: "index_user_projects_on_user_id"
   end
 
+  create_table "user_skills", force: :cascade do |t|
+    t.string "skill"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_user_skills_on_user_id"
+  end
+
+  create_table "user_workplaces", force: :cascade do |t|
+    t.string "company_name"
+    t.string "position"
+    t.text "content"
+    t.date "start_date"
+    t.date "end_date"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_user_workplaces_on_user_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -74,12 +113,16 @@ ActiveRecord::Schema[7.2].define(version: 2025_07_21_143008) do
     t.string "phone_number"
     t.string "github"
     t.string "linkedin"
-    t.text "description"
+    t.text "content"
     t.string "driving_license"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "user_academics", "users"
+  add_foreign_key "user_languages", "users"
   add_foreign_key "user_notes", "users"
   add_foreign_key "user_projects", "users"
+  add_foreign_key "user_skills", "users"
+  add_foreign_key "user_workplaces", "users"
 end
