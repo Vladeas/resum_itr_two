@@ -1,18 +1,110 @@
-
-<div class="flex justify-center items-center max-w-8xl mx-auto p-4 my-8">
-  <div class="bg-[--color-test] rounded-2xl shadow-xl overflow-hidden">
-    <h1> Title</h1>
-    
-  </div>
-</div>
-
-<div class="bg-white flex justify-center items-center max-w-8xl mx-auto p-5 my-8">
-  <div class='flex flex-col items-center justify-between bg-white dark:bg-gray-800 shadow-md shadow-gray-300 text-gray-800 dark:text-gray-200 border border-gray-200 dark:border-gray-600 w-full md:w-8/12 mx-auto h-auto rounded-xl transition-all ease-in-out duration-500 mb-4 py-2 px-2 md:px-4'>
-        <div class='w-full flex items-center justify-between'>
-            
+<!-- This one, simple enough -->
+<!-- Work in progress-->
+<div class="bg-gray-100 text-gray-800">
+    <div class="container mx-auto py-10 px-5">
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+            <div class="p-4 sm:p-6">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <h2 class="text-2xl font-semibold"><%= User.first.full_name %></h2>
+                        <p class="text-sm text-gray-600">Senior Software Engineer</p>
+                    </div>
+                    <div>
+                        <p class="text-sm text-gray-600">Phone: <%= User.first.phone_number %></p>
+                        <p class="text-sm text-gray-600">Email: <%= User.first.email %></a></p>
+                        <p class="text-sm text-gray-600">Location: </p>
+                    </div>
+                </div>
+                <hr class="my-4">
+                <div>
+                    <h3 class="text-lg font-semibold mb-2">Summary</h3>
+                    <p class="text-sm leading-relaxed"><%= User.first.content %></p>
+                </div>
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold mb-2">Experience</h3>
+                    <div>
+                        <h4 class="text-md font-semibold">ABC Corporation</h4>
+                        <p class="text-sm text-gray-600">Senior Software Engineer | 2015 - Present</p>
+                        <ul class="list-disc list-inside text-sm">
+                            <li>Lead a team of developers in designing and implementing a scalable microservices
+                                architecture.</li>
+                            <li>Developed and maintained critical components of the company's flagship product, resulting
+                                in increased reliability and performance.</li>
+                            <li>Collaborated with product managers to define project requirements and timelines.</li>
+                        </ul>
+                    </div>
+                    <div class="mt-4">
+                        <h4 class="text-md font-semibold">XYZ Tech</h4>
+                        <p class="text-sm text-gray-600">Software Engineer | 2008 - 2015</p>
+                        <ul class="list-disc list-inside text-sm">
+                            <li>Contributed to the development of a cutting-edge mobile application, used by millions of
+                                users worldwide.</li>
+                            <li>Implemented continuous integration and deployment pipelines, improving team efficiency
+                                and product quality.</li>
+                            <li>Mentored junior engineers and conducted code reviews to ensure adherence to best
+                                practices.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold mb-2">Skills</h3>
+                    <ul class="list-disc list-inside text-sm">
+                        <li>Programming Languages: Java, Python, JavaScript</li>
+                        <li>Frameworks & Libraries: Spring Boot, React, Angular</li>
+                        <li>Database Systems: MySQL, PostgreSQL, MongoDB</li>
+                        <li>Cloud Technologies: AWS, Azure, Google Cloud Platform</li>
+                        <li>Agile Methodologies: Scrum, Kanban</li>
+                        <li>DevOps Tools: Docker, Kubernetes, Jenkins</li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold mb-2">Skills</h3>
+                    <ul class="list-disc list-inside text-sm">
+                        <li>Programming Languages: Java, Python, JavaScript</li>
+                        <li>Frameworks & Libraries: Spring Boot, React, Angular</li>
+                        <li>Database Systems: MySQL, PostgreSQL, MongoDB</li>
+                        <li>Cloud Technologies: AWS, Azure, Google Cloud Platform</li>
+                        <li>Agile Methodologies: Scrum, Kanban</li>
+                        <li>DevOps Tools: Docker, Kubernetes, Jenkins</li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold mb-2">Skills</h3>
+                    <ul class="list-disc list-inside text-sm">
+                        <li>Programming Languages: Java, Python, JavaScript</li>
+                        <li>Frameworks & Libraries: Spring Boot, React, Angular</li>
+                        <li>Database Systems: MySQL, PostgreSQL, MongoDB</li>
+                        <li>Cloud Technologies: AWS, Azure, Google Cloud Platform</li>
+                        <li>Agile Methodologies: Scrum, Kanban</li>
+                        <li>DevOps Tools: Docker, Kubernetes, Jenkins</li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold mb-2">Skills</h3>
+                    <ul class="list-disc list-inside text-sm">
+                        <li>Programming Languages: Java, Python, JavaScript</li>
+                        <li>Frameworks & Libraries: Spring Boot, React, Angular</li>
+                        <li>Database Systems: MySQL, PostgreSQL, MongoDB</li>
+                        <li>Cloud Technologies: AWS, Azure, Google Cloud Platform</li>
+                        <li>Agile Methodologies: Scrum, Kanban</li>
+                        <li>DevOps Tools: Docker, Kubernetes, Jenkins</li>
+                    </ul>
+                </div>
+                <div class="mt-4">
+                    <h3 class="text-lg font-semibold mb-2">Skills</h3>
+                    <ul class="list-disc list-inside text-sm">
+                        <li>Programming Languages: Java, Python, JavaScript</li>
+                        <li>Frameworks & Libraries: Spring Boot, React, Angular</li>
+                        <li>Database Systems: MySQL, PostgreSQL, MongoDB</li>
+                        <li>Cloud Technologies: AWS, Azure, Google Cloud Platform</li>
+                        <li>Agile Methodologies: Scrum, Kanban</li>
+                        <li>DevOps Tools: Docker, Kubernetes, Jenkins</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class='text-left p-2'>
-            
-        </div>
+          <p class="leading-relaxed text-xl text-gray-900 mt-8">
+            Hello
+            </p>
     </div>
 </div>

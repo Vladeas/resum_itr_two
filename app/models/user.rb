@@ -18,6 +18,10 @@ class User < ApplicationRecord
   accepts_nested_attributes_for :user_skills, allow_destroy: true
   accepts_nested_attributes_for :user_workplaces, allow_destroy: true
 
+  def full_name
+    forename.to_s + " " + surname.to_s
+  end
+
   def self.ransackable_attributes(auth_object = nil)
     [ "created_at", "date_of_birth", "driving_license", "email", "encrypted_password", "forename", "github",
      "id", "id_value", "linkedin", "phone_number", "remember_created_at", "reset_password_sent_at", "reset_password_token",

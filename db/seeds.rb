@@ -28,18 +28,66 @@ when "development"
             nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.
             Ad litora torquent per conubia nostra inceptos himenaeos.
 
-            Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.
-            In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus
-            nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.
-            Ad litora torquent per conubia nostra inceptos himenaeos.") if !User.find_by_email("user@example.com")
+                Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.
+                In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus
+                nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.
+                Ad litora torquent per conubia nostra inceptos himenaeos.") if !User.find_by_email("user@example.com")
 
-    User.create!(email: "user2@example.com",
-            password: ENV["SEED_PASSWORD"],
-            password_confirmation: ENV["SEED_PASSWORD"]) if !User.find_by_email("user2@example.com")
+        User.create!(email: "user2@example.com",
+                password: ENV["SEED_PASSWORD"],
+                password_confirmation: ENV["SEED_PASSWORD"]) if !User.find_by_email("user2@example.com")
 
-    AdminUser.create!(email: "admin@example.com",
-            password: ENV["SEED_PASSWORD"],
-            password_confirmation: ENV["SEED_PASSWORD"]) if !AdminUser.find_by_email("admin@example.com")
+        AdminUser.create!(email: "admin@example.com",
+                password: ENV["SEED_PASSWORD"],
+                password_confirmation: ENV["SEED_PASSWORD"]) if !AdminUser.find_by_email("admin@example.com")
+
+        UserLanguage.create!(language: "english",
+                proficiency: "advanced",
+                user_id: 1)
+
+        UserLanguage.create!(language: "romanian",
+                proficiency: "native",
+                user_id: 1)
+
+        UserAcademic.create!(name: "Technical University of Cluj Napoca",
+                status: "Fourth year - unfinished",
+                user_id: 1,
+                content: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.
+                In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus")
+
+        UserAcademic.create!(name: "Cambridge Advanced English",
+                status: "Fourth year - unfinished",
+                user_id: 1,
+                content: "Level 3/C2,Score 200")
+
+        UserWorkplace.create!(company_name: "Duty Ventures",
+                position: "Web developer",
+                start_date: "2021-07",
+                end_date: "2022-08",
+                content: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.
+                In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus
+                nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.
+                Ad litora torquent per conubia nostra inceptos himenaeos.",
+                user_id: 1)
+
+        UserSkill.create!(skill: "OOP/Git",
+                user_id: 1)
+
+        UserSkill.create!(skill: "Ruby on Rails",
+                user_id: 1)
+
+        UserSkill.create!(skill: "HTML/CSS",
+                user_id: 1)
+
+        UserSkill.create!(skill: "Python",
+                user_id: 1)
+
+        UserSkill.create!(skill: "Communiaction/Teamwork",
+                user_id: 1)
+
+        UserSkill.create!(skill: "Desire to learn",
+                user_id: 1)
+
 when "production"
   # A secret tool for later ;)
 end
