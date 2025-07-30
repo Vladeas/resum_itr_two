@@ -21,6 +21,7 @@ when "development"
             github: "https://github.com/Vladeas",
             linkedin: "https://www.google.com/search?num=10&newwindow=1&client=firefox-b-lm&sca_esv=4f09092a201a8ac4&channel=entpr&sxsrf=AE3TifPvqdsQwJokTFocSPxoFDX9POC_Qg:1753512248292&q=cats&udm=2&fbs=AIIjpHxU7SXXniUZfeShr2fp4giZ1Y6MJ25_tmWITc7uy4KIeoJTKjrFjVxydQWqI2NcOhYPURIv2wPgv_w_sE_0Sc6QqqU7k8cSQndc5mTXCIWHa5yWh8UZLeaMB2TzsL707pc1UdUOyvWrdH9KzB0rwa56e4sZMK6yB9HCSc5sZ95qH7WhtZ4UgYYwhFKAtUJ9yDKl7bQ8&sa=X&ved=2ahUKEwjPzKyV9tmOAxWjW0EAHfaBM28QtKgLKAF6BAgqEAE&biw=1920&bih=923&dpr=1#vhid=12ydIzin8CyDxM&vssid=mosaic",
             driving_license: "B",
+            location: "Cluj-Napoca, Ro",
             content: "
             Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.
             In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus
