@@ -12,7 +12,7 @@
                     <div>
                         <p class="text-sm text-gray-600">Phone: <%= User.first.phone_number %></p>
                         <p class="text-sm text-gray-600">Email: <%= User.first.email %></a></p>
-                        <p class="text-sm text-gray-600">Location: </p>
+                        <p class="text-sm text-gray-600">Location: <%= User.first.location %></p>
                     </div>
                 </div>
                 <hr class="my-4">
@@ -21,16 +21,12 @@
                     <p class="text-sm leading-relaxed"><%= User.first.content %></p>
                 </div>
                 <div class="mt-4">
-                    <h3 class="text-lg font-semibold mb-2">Experience</h3>
+                    <h3 class="text-lg font-semibold mb-2">Work Experience</h3>
                     <div>
-                        <h4 class="text-md font-semibold">ABC Corporation</h4>
-                        <p class="text-sm text-gray-600">Senior Software Engineer | 2015 - Present</p>
+                        <h4 class="text-md font-semibold"><%= User.first.user_workplaces.first.company_name %></h4>
+                        <p class="text-sm text-gray-600"><%= User.first.user_workplaces.first.position %> | <%= User.first.user_workplaces.first.start_date %> - <%= User.first.user_workplaces.first.end_date %></p>
                         <ul class="list-disc list-inside text-sm">
-                            <li>Lead a team of developers in designing and implementing a scalable microservices
-                                architecture.</li>
-                            <li>Developed and maintained critical components of the company's flagship product, resulting
-                                in increased reliability and performance.</li>
-                            <li>Collaborated with product managers to define project requirements and timelines.</li>
+                            <li><%= User.first.user_workplaces.first.content %> </li>
                         </ul>
                     </div>
                     <div class="mt-4">
@@ -49,12 +45,11 @@
                 <div class="mt-4">
                     <h3 class="text-lg font-semibold mb-2">Skills</h3>
                     <ul class="list-disc list-inside text-sm">
-                        <li>Programming Languages: Java, Python, JavaScript</li>
-                        <li>Frameworks & Libraries: Spring Boot, React, Angular</li>
-                        <li>Database Systems: MySQL, PostgreSQL, MongoDB</li>
-                        <li>Cloud Technologies: AWS, Azure, Google Cloud Platform</li>
-                        <li>Agile Methodologies: Scrum, Kanban</li>
-                        <li>DevOps Tools: Docker, Kubernetes, Jenkins</li>
+                        <li><%= User.first.user_skills.first.skill %></li>
+                        <li><%= User.first.user_skills.second.skill %></li>
+                        <li><%= User.first.user_skills.third.skill %></li>
+                        <li><%= User.first.user_skills.fourth.skill %></li>
+                        <li><%= User.first.user_skills.fifth.skill %></li>
                     </ul>
                 </div>
                 <div class="mt-4">
